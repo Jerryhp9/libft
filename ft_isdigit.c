@@ -6,11 +6,11 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 19:31:59 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/07 15:32:30 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/07 16:42:49 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include "libft.h"
 
 /** 
@@ -27,8 +27,8 @@ int ft_isdigit(int c)
 	return (0);
 }
 
-int main()
+/*int main()
 {
 	int c = 'a';
 	printf("%d", ft_isdigit(c));
-}
+}*/

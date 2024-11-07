@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 14:37:46 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/07 17:21:57 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/07 17:24:50 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/07 18:08:47 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+//#include <stdio.h>
 
-/** 
- * @brief check if its ascii character
- * @param c character
- * @return 1 is true or 0 false
+/**
+* @brief counting str char
+* @param char string
+* @return return i when finish counting
 */
 
-int ft_isascii(int c)
+int ft_strlen(char *str)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int i;
+
+	i = 0;
+	
+	while (str[i] != '\0')
+	{
+	i++;
+	}
+	return (i);
 }
+
+/*int main ()
+{
+	char *str1 = "abcdefuirythgnblkyrt";
+	printf("%d", ft_strlen(str1));
+	return (0);
+}*/
