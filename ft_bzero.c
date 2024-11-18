@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/11 10:36:33 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/11 10:36:33 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+void ft_bzero(void *s, size_t n)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+    unsigned char *p = (unsigned char*)s;
+
+    int i;
+
+    i = 0;
+
+    while (i < n)
+    {
+        p[i] = '0';
+        i++;
+    }
 }
+
 
 /*int main ()
 {
-	int a = ' ';
-	int b = '~';
+    char str[15] = "Hello World";
 
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
+    ft_bzero(str + 5, 3*sizeof(char));
+
+    printf("%s\n", str);
 }*/

@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/13 18:21:37 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/13 18:21:37 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+	int	i;
+
+	i = 0;
+	while (n > i && s1[i] != '\0' && s2[i] != '\0')
+	{
+		if (s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return (0);
 }
 
 /*int main ()
 {
-	int a = ' ';
-	int b = '~';
+	char str1 [] = "helLo";
+	char str2 [] ="hello";
 
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
+	printf("%d\n", ft_strncmp(str1, str2, 3));
 }*/

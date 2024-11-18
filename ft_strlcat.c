@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/12 18:53:00 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/12 18:53:00 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+size_t ft_strlcat(char *dest, const char *src, size_t size)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+	int destlen;
+	int srclen;
+ 
+	totallen = destlen + srclen;
+
+	totallen = ft_strlen(dest, src)
+
+	if ()
 }
-
-/*int main ()
-{
-	int a = ' ';
-	int b = '~';
-
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
-}*/

@@ -6,11 +6,11 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:24:50 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/07 18:08:47 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/12 18:30:26 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
 /**
 * @brief counting str char
@@ -18,7 +18,7 @@
 * @return return i when finish counting
 */
 
-int ft_strlen(char *str)
+size_t ft_strlen(const char *str)
 {
 	int i;
 
@@ -31,9 +31,9 @@ int ft_strlen(char *str)
 	return (i);
 }
 
-/*int main ()
-{
-	char *str1 = "abcdefuirythgnblkyrt";
-	printf("%d", ft_strlen(str1));
-	return (0);
-}*/
+// int main ()
+// {
+// 	char *str1 = "abcdefuirythgnblkyasd";
+// 	printf("%ld\n", ft_strlen(str1));
+// 	return (0);
+// }

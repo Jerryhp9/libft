@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/11 00:11:16 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/11 00:11:16 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
+ * @brief memory block manipulation
+ * @param pointer s, integer x, size of memory n
+ * @return replacement of data types values
 */
 
-int ft_isprint(int c)
+void ft_memset(void *s, int x, size_t n)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+    unsigned char *p = (unsigned char*)s;
+
+    while (n--)
+        *p++ = (unsigned char)x;
 }
 
-/*int main ()
+int main ()
 {
-	int a = ' ';
-	int b = '~';
+    char str[50] = "Internationally responsive";
 
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
-}*/
+    ft_memset(str + 15, 'r', 8*sizeof(char));
+
+    printf("%s\n", str);
+
+    return (0);
+}

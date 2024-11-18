@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/12 21:06:22 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/12 21:06:22 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+int	ft_toupper(int c)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+	if (c >= 'A' && c <= 'Z')
+	{
+		c = c + 32;
+	}
+	return (c);
 }
 
 /*int main ()
 {
-	int a = ' ';
-	int b = '~';
-
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
+printf("%c\n", ft_toupper('A'));
 }*/

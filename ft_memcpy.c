@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 19:31:59 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:54 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/11 11:43:18 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/11 11:43:18 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check digit
- * @param c character
- * @return 1 is true or 0 false
-*/
-int ft_isdigit(int c)
+void ft_memcpy(void *dest, const void *src, size_t n)
 {
-	if (c >= '0' && c <= '9')
-	{
-		return (1);
-	}
-	return (0);
+    unsigned char *pDest;
+    const unsigned char *pSrc;
+    int i;
+
+    *pDest = (unsigned char*)dest;
+    *pSrc = (const unsigned char*)src;
+    i = 0;
+
+    while (i < n)
+    {
+        pDest[i] = pSrc[i];
+        i++;
+    }
+    return (pDest);
 }
 
 /*int main()
 {
-	int c = 'a';
-	printf("%d", ft_isdigit(c));
+    char src[10] = "Yello!";
+    char dest[10] = "Hello";
+
+    ft_memcpy(dest, src, 6*sizeof(char));
+
+    printf("%s\n", dest);
 }*/

@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/13 17:56:01 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/13 17:56:01 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+	const char	*p = s + ft_strlen(s) -1;
+
+	while (p >= s)
+	{
+		if (*p == (char)c)
+		{
+			return ((char *)p);
+		}
+		p--;
+	}
+	return ('\0');
 }
 
-/*int main ()
-{
-	int a = ' ';
-	int b = '~';
+/*int main() {
+	const char *str = "Hello, world!";
+	char *ptr = ft_strrchr(str, 'o');
 
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
+	if (*ptr != '\0') {
+		printf("%s\n", ptr);
+	}
+	return 0;
 }*/

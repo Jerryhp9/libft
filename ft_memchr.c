@@ -1,35 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/13 20:17:34 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/13 20:17:34 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+	const char	*p;
+	int			i;
+
+	p = (const char *)s;
+	i = 0;
+	while (i < n)
+	{
+		if (*p == (char)c)
+		{
+			return ((char *)p);
+		}
+		p++;
+	}
+	return (NULL);
 }
 
-/*int main ()
+/*int main()
 {
-	int a = ' ';
-	int b = '~';
+	const char str[] = "Internationally responsive";
 
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
+	char *ptr = ft_memchr(str, 'p', 23);
+
+	if (*ptr != '\0') {
+		printf("%s\n", ptr);
+	}
 }*/

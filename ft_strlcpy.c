@@ -1,35 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   strlcpy.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/12 16:58:29 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/12 16:58:29 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/** 
- * @brief check printable characters
- * @param c character
- * @return 1 is true or 0 false
-*/
-
-int ft_isprint(int c)
+size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	if (c >= 33 && c <= 126)
-		return (1);
-	return(0);
+	int destsize;
+	int srclen;
+	int i;
+
+	destsize = size;
+	srclen = ft_strlen(src);
+	i = 0;
+	if (destsize == 0)
+		{
+			return (srclen);
+		}
+	while ((i < destsize - 1) && (dest[i] != '\0'))
+	{
+			dest[i] = src[i];
+			i++;
+	}
+	dest[i] = '\0';
+	return (srclen);
 }
 
-/*int main ()
+int main ()
 {
-	int a = ' ';
-	int b = '~';
+	char src [] = "Programmming";
+	char dest [10];
 
-	printf("%d", ft_isprint(a));
-	printf("%d", ft_isprint(b));
-}*/
+	printf("%lu\n", ft_strlcpy(dest, src, 3));
+}
