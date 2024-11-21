@@ -25,12 +25,12 @@ char	*ft_strchr(const char *s, int c)
 	return ('\0');
 }
 
-/*int main() {
-	const char *str = "Hello, world!";
-	char *ptr = ft_strchr(str, 'o');
+// int main() {
+// 	const char *str = "Hello, world!";
+// 	char *ptr = ft_strchr(str, 'o');
 
-	if (*ptr != '\0') {
-		printf("%s\n", ptr);
-	}
-	return 0;
-}*/
+// 	if (*ptr != '\0') {
+// 		printf("%s\n", ptr);
+// 	}
+// 	return 0;
+// }

@@ -1,41 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strlcpy.c                                          :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 16:58:29 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 16:58:29 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/18 17:50:36 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/18 17:50:36 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dest, const char *src, size_t size)
+char	*ft_strdup(const char *s)
 {
-	int	destsize;
-	int	srclen;
-	int	i;
+	size_t	s1;
+	char	*dup;
+	int		i;
 
-	destsize = size;
-	srclen = ft_strlen(src);
-	i = 0
-		if (destsize == 0)
-		return (srclen);
-	while ((i < destsize - 1) && (dest[i] != '\0'))
+	s1 = ft_strlen(s);
+	dup = (char *) malloc(sizeof(char) * (s1 + 1));
+	i = 0;
+	if (dup == 0)
 	{
-		dest[i] = src[i];
+		return (NULL);
+	}
+	while (s[i] != '\0')
+	{
+		dup[i] = s[i];
 		i++;
 	}
-	dest[i] = '\0';
-	return (srclen);
+	dup[i] = '\0';
+	return (dup);
 }
 
-// int main ()
+// int main()
 // {
-// 	char src [] = "Programmming";
-// 	char dest [10];
+// 	char *str = "qweasdzxc";
 
-// 	printf("%lu\n", ft_strlcpy(dest, src, 3));
+// 	printf("%s", ft_strdup(str));
+// 	printf("\n");
+
+// 	return (0);
 // }

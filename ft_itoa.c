@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 18:53:00 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:53:00 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/21 20:48:57 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/21 20:48:57 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dest, const char *src, size_t size)
+char *ft_itoa(int n)
 {
-	int		destlen;
-	int		srclen;
-	size_t	totallen;
- 
-	totallen = destlen + srclen;
-
-	totallen = ft_strlen(dest, src)
-
-	if ()
+	
 }
