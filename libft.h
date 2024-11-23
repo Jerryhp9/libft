@@ -6,7 +6,7 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 16:28:24 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/21 18:05:26 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/23 22:23:32 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stddef.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <unistd.h>
+# include <fcntl.h>
 
 int 	ft_isalpha(int c);
 int 	ft_isdigit(int c);
@@ -24,6 +26,7 @@ int 	ft_isascii(int c);
 int 	ft_isprint(int c);
 size_t 	ft_strlen(const char *str);
 char 	*ft_strtrim(char const *s1, char const *set);
+void	ft_putchar_fd(char c, int fd);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strdup(const char *s);
 void 	ft_memset(void *s, int x, size_t n);

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static int wordcount (const char *s, int c)
+static int	wordcount(const char *s, int c)
 {
 	int	wordcount;
 
@@ -28,8 +28,8 @@ static int wordcount (const char *s, int c)
 	}
 	return (wordcount);
 }
-//line 50 - 
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
 	int		wordlen;
 	char	**str;
@@ -57,15 +57,15 @@ char **ft_split(char const *s, char c)
 	return (str);
 }
 
-int main ()
-{
-	char *str = "___________________________qwe____rtyy__/////_";
+// int main ()
+// {
+// 	char *str = "___________________________qwe____rtyy__/////_";
 
-	char **output = ft_split(str, '_');
-	int index = 0;
-	while (output[index])
-	{
-		printf("%s\n", output[index]);
-		index++;
-	}
-}
+// 	char **output = ft_split(str, '_');
+// 	int index = 0;
+// 	while (output[index])
+// 	{
+// 		printf("%s\n", output[index]);
+// 		index++;
+// 	}
+// }

@@ -1,27 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 21:06:22 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 21:06:22 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/23 16:10:56 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/23 16:10:56 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
-{
-	if (c >= 'A' && c <= 'Z')
-	{
-		c = c + 32;
-	}
-	return (c);
-}
+// void oddupper(unsigned int i, char *c)
+// {
+// 	if (i % 2 == 1 && *c >= 'a' && *c <= 'z')
+// 		*c -= 32;
+// }
 
-/*int main ()
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-printf("%c\n", ft_toupper('A'));
-}*/
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
+}
+// int main()
+// {
+// 	char str[] = "hello, there";
+
+// 	ft_striteri(str, oddupper);
+
+// 	printf("%s\n", str);
+
+// 	return (0);
+// }

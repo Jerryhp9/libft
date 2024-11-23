@@ -1,27 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 21:06:22 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 21:06:22 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/23 23:02:33 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/23 23:02:33 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		c = c + 32;
-	}
-	return (c);
-}
+	size_t	len;
 
-/*int main ()
-{
-printf("%c\n", ft_toupper('A'));
-}*/
+	if (!s)
+		return ;
+	len = ft_strlen(s);
+	write(fd, s, len);
+	write(fd, "\n", 1);
+}
+// int main()
+// {
+// 	char str[] = "Hello there!";
+
+// 	int fd = open("text2.txt", O_WRONLY | O_CREAT | O_TRUNC, 0664);
+
+// 	ft_putendl_fd(str, fd);
+// }

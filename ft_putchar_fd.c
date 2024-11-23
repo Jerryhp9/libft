@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 21:06:22 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 21:06:22 by jhor             ###   ########.fr       */
+/*   Created: 2024/11/23 21:51:39 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/23 21:51:39 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_tolower(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-	{
-		c = c + 32;
-	}
-	return (c);
+	write(fd, &c, 1);
 }
+// int main()
+// {
+// 	int fd = open("test.txt", O_WRONLY);
 
-/*int main ()
-{
-printf("%c\n", ft_toupper('A'));
-}*/
+// 	ft_putchar_fd('c', 1);
+// }
