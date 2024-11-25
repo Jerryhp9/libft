@@ -12,27 +12,25 @@
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    unsigned char *p = (unsigned char*)s;
+	unsigned char	*p;
+	int				i;
 
-    int i;
-
-    i = 0;
-
-    while (i < n)
-    {
-        p[i] = '0';
-        i++;
-    }
+	p = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		p[i] = '0';
+		i++;
+	}
 }
 
+// int main()
+// {
+// 	char str[15] = "Hello World";
 
-/*int main ()
-{
-    char str[15] = "Hello World";
+// 	ft_bzero(str + 5, 3*sizeof(char));
 
-    ft_bzero(str + 5, 3*sizeof(char));
-
-    printf("%s\n", str);
-}*/
+// 	printf("%s\n", str);
+// }

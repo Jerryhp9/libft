@@ -12,17 +12,18 @@
 
 #include "libft.h"
 
- void *ft_calloc(size_t n, size_t s)
- {
-	size_t totalsize;
+void	*ft_calloc(size_t n, size_t s)
+{
+	size_t	totalsize;
+	void	*memblock;
+	size_t	i;
 
 	totalsize = n * s;
-	void *memblock = malloc(totalsize);
+	memblock = malloc(totalsize);
 	if (memblock == NULL)
 	{
 		return (NULL);
 	}
-	size_t i;
 	i = 0;
 	while (i < totalsize)
 	{
@@ -30,23 +31,23 @@
 		i++;
 	}
 	return (memblock);
- }
+}
 
- int main()
- {
-	int	n = 10;
-	int *str = ft_calloc(n, sizeof(int));
+//  int main()
+//  {
+// 	int	n = 10;
+// 	int *str = ft_calloc(n, sizeof(int));
 
-	int	i;
+// 	int	i;
 
-	i = 0;
-	while (i < n)
-	{
-	printf("%d", str[i]);
-	i++;
-	}
-	printf("\n");
+// 	i = 0;
+// 	while (i < n)
+// 	{
+// 	printf("%d", str[i]);
+// 	i++;
+// 	}
+// 	printf("\n");
 
-	free(str);
-	return (0);
- }
+// 	free(str);
+// 	return (0);
+//  }

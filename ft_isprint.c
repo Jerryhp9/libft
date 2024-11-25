@@ -6,7 +6,7 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 16:46:45 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:58 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/25 17:48:00 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,11 @@
  * @return 1 is true or 0 false
 */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 33 && c <= 126)
 		return (1);
-	return(0);
+	return (0);
 }
 
 /*int main ()

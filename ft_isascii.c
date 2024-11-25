@@ -6,7 +6,7 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 14:37:46 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/07 17:21:57 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/25 17:47:30 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
  * @return 1 is true or 0 false
 */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:24:50 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:30:26 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/25 17:52:42 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,13 @@
 * @return return i when finish counting
 */
 
-size_t ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
-	
 	while (str[i] != '\0')
-	{
-	i++;
-	}
+		i++;
 	return (i);
 }
 

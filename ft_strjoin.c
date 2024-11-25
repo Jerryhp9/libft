@@ -16,11 +16,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		i;
 	int		j;
-	 char	*newstr;
-	size_t len;
+	char	*newstr;
+	size_t	len;
 
 	len = ft_strlen(s1) + ft_strlen(s2);
-	if(s1 == NULL && s2 == NULL)
+	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	newstr = (char *)malloc(sizeof (char) * (len + 1));
 	if (newstr == NULL)
@@ -28,7 +28,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	i = 0;
 	while (s1[i] != '\0')
 	{
-		newstr[i] =  s1[i];
+		newstr[i] = s1[i];
 		i++;
 	}
 	j = 0;

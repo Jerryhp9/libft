@@ -18,21 +18,22 @@
  * @return replacement of data types values
 */
 
-void ft_memset(void *s, int x, size_t n)
+void	ft_memset(void *s, int x, size_t n)
 {
-    unsigned char *p = (unsigned char*)s;
+	unsigned char	*p;
 
-    while (n--)
-        *p++ = (unsigned char)x;
+	p = (unsigned char *)s;
+	while (n--)
+		*p++ = (unsigned char)x;
 }
 
-int main ()
-{
-    char str[50] = "Internationally responsive";
+// int main ()
+// {
+// 	char str[50] = "Internationally responsive";
 
-    ft_memset(str + 15, 'r', 8*sizeof(char));
+// 	ft_memset(str + 15, 'r', 8*sizeof(char));
 
-    printf("%s\n", str);
+// 	printf("%s\n", str);
 
-    return (0);
-}
+// 	return (0);
+// }

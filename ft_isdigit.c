@@ -6,7 +6,7 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 19:31:59 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/12 18:47:54 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/25 17:47:42 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
  * @param c character
  * @return 1 is true or 0 false
 */
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 	{
