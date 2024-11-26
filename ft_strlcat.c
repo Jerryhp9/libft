@@ -20,7 +20,9 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	destlen = ft_strlen(dest);
 	srclen = ft_strlen(src);
-	if (size >= destlen)
+	if (dest == NULL && size == 0)
+		return (srclen);
+	if (size <= destlen)
 		return (srclen + size);
 	i = 0;
 	while (src[i] != '\0' && (destlen + i + 1) < size)
@@ -31,7 +33,21 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	dest[destlen + i] = '\0';
 	return (destlen + srclen);
 }
+// #include <string.h>
+// #include <stdio.h>
 // int main()
+// {
+// 	char dest[20] = "Hello there";
+// 	char src[] = "everyone";
+// 	size_t result;
+
+	
+// 	// result = strlcat(dest, src, sizeof(dest));
+// 	result = ft_strlcat(dest, src, 25);
+
+// 	printf("%ld\n", result);
+// 	printf("%s", dest);
+// }
 // {
 // 	char dest[20] = "Hello there";
 // 	char src[] = "everyone";
@@ -40,4 +56,4 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 // 	result = ft_strlcat(dest, src, sizeof(dest));
 
 // 	printf("%ld\n", result);
-// }
+//}

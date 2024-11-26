@@ -19,7 +19,7 @@ static int	wordcount(const char *s, int c)
 
 	wordcount = 0;
 	j = 0;
-	while (*s)
+	while (s[j])
 	{
 		while (s[j] == c)
 			j++;
@@ -37,6 +37,7 @@ char	**ft_split(char const *s, char c)
 	char	**str;
 	int		i;
 
+	i = 0;
 	if (!s)
 		return (NULL);
 	str = (char **)malloc(sizeof(char *) * (wordcount(s, c) + 1));

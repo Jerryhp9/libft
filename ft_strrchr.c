@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		p--;
 	}
-	return ('\0');
+	return (0);
 }
 
 /*int main() {

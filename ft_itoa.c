@@ -43,7 +43,7 @@ char	*ft_itoa(int n)
 	int		nbr;
 
 	if (n == '0')
-		return (ft_strdup('\0'));
+		return (ft_strdup(""));
 	str = (char *)malloc((sizeof(char)) * (numlen(n) + 1));
 	if (str == NULL)
 		return (NULL);

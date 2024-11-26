@@ -32,15 +32,15 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 
-// #include <string.h>
-int main ()
-{
-	// (void)ac;
-	char strr1[] = "information underload";
-	char strr2[] = "information overload";
-// char *strr1 = av[1];
-// char *strr2 = ac[2];
+// // #include <string.h>
+// int main ()
+// {
+// 	// (void)ac;
+// 	char strr1[] = "information underload";
+// 	char strr2[] = "information overload";
+// // char *strr1 = av[1];
+// // char *strr2 = ac[2];
 
-	printf("%d\n", ft_memcmp(strr1, strr2, 15*sizeof(char)));
-// printf("%d\n", memcmp(strr1, strr2, 4*sizeof(char)));
-}
+// 	printf("%d\n", ft_memcmp(strr1, strr2, 15*sizeof(char)));
+// // printf("%d\n", memcmp(strr1, strr2, 4*sizeof(char)));
+// }

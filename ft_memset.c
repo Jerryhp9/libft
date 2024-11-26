@@ -1,40 +1,39 @@
-// /* ************************************************************************** */
-// /*                                                                            */
-// /*                                                        :::      ::::::::   */
-// /*   ft_memset.c                                        :+:      :+:    :+:   */
-// /*                                                    +:+ +:+         +:+     */
-// /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
-// /*                                                +#+#+#+#+#+   +#+           */
-// /*   Created: 2024/11/11 00:11:16 by jhor              #+#    #+#             */
-// /*   Updated: 2024/11/11 00:11:16 by jhor             ###   ########.fr       */
-// /*                                                                            */
-// /* ************************************************************************** */
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/11 00:11:16 by jhor              #+#    #+#             */
+/*   Updated: 2024/11/11 00:11:16 by jhor             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
-// /** 
-//  * @brief memory block manipulation
-//  * @param pointer s, integer x, size of memory n
-//  * @return replacement of data types values
-// */
+/** 
+ * @brief memory block manipulation
+ * @param pointer s, integer x, size of memory n
+ * @return replacement of data types values
+*/
 
-// void	ft_memset(void *s, int c, size_t n)
+void	ft_memset(void *s, int c, size_t n)
+{
+	unsigned char	*p;
+
+	p = (unsigned char *)s;
+	while (n--)
+		*p++ = (unsigned char)c;
+}
+
+// int main ()
 // {
-// 	unsigned char	*p;
+// 	char str[50] = "Internationally responsive";
 
-// 	p = (unsigned char *)s;
-// 	while (n--)
-// 		*p++ = (unsigned char)c;
-// 	// return (s);
+// 	ft_memset(str + 15, 'r', 8*sizeof(char));
+
+// 	printf("%s\n", str);
+
+// 	return (0);
 // }
-
-// // int main ()
-// // {
-// // 	char str[50] = "Internationally responsive";
-
-// // 	ft_memset(str + 15, 'r', 8*sizeof(char));
-
-// // 	printf("%s\n", str);
-
-// // 	return (0);
-// // }
