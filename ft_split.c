@@ -15,16 +15,18 @@
 static int	wordcount(const char *s, int c)
 {
 	int	wordcount;
+	int	j;
 
 	wordcount = 0;
+	j = 0;
 	while (*s)
 	{
-		while (*s == c)
-			s++;
-		if (*s != c && *s != '\0')
+		while (s[j] == c)
+			j++;
+		if (s[j] != c && s[j] != '\0')
 			wordcount++;
-		while (*s != c && *s)
-			*s++;
+		while (s[j] != c && s[j])
+			j++;
 	}
 	return (wordcount);
 }

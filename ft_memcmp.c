@@ -14,9 +14,9 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	char	*p1 ;
-	char	*p2;
-	int		i;
+	char			*p1;
+	char			*p2;
+	unsigned int	i;
 
 	p1 = (char *)str1;
 	p2 = (char *)str2;
@@ -29,16 +29,18 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 		}
 		i++;
 	}
+	return (0);
 }
+
 // #include <string.h>
-// int main ()
-// {
-// 	// (void)ac;
-// 	char strr1[] = "information underload";
-// 	char strr2[] = "information overload";
+int main ()
+{
+	// (void)ac;
+	char strr1[] = "information underload";
+	char strr2[] = "information overload";
 // char *strr1 = av[1];
 // char *strr2 = ac[2];
 
-// 	printf("%d\n", ft_memcmp(strr1, strr2, 15*sizeof(char)));
+	printf("%d\n", ft_memcmp(strr1, strr2, 15*sizeof(char)));
 // printf("%d\n", memcmp(strr1, strr2, 4*sizeof(char)));
-// }
+}

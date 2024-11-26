@@ -10,18 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// #include <string.h>
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned char	*p;
-	int				i;
+	size_t			i;
 
 	p = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		p[i] = '0';
+		p[i] = 0;
 		i++;
 	}
 }
@@ -31,6 +32,7 @@ void	ft_bzero(void *s, size_t n)
 // 	char str[15] = "Hello World";
 
 // 	ft_bzero(str + 5, 3*sizeof(char));
+// 	// bzero(str + 5, 3*sizeof(char));
 
 // 	printf("%s\n", str);
 // }

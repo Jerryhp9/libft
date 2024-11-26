@@ -1,51 +1,80 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/11 14:33:51 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/11 14:33:51 by jhor             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+// /* ************************************************************************** */
+// /*                                                                            */
+// /*                                                        :::      ::::::::   */
+// /*   ft_memmove.c                                       :+:      :+:    :+:   */
+// /*                                                    +:+ +:+         +:+     */
+// /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
+// /*                                                +#+#+#+#+#+   +#+           */
+// /*   Created: 2024/11/11 14:33:51 by jhor              #+#    #+#             */
+// /*   Updated: 2024/11/11 14:33:51 by jhor             ###   ########.fr       */
+// /*                                                                            */
+// /* ************************************************************************** */
 
-#include "libft.h"
+// #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
-{
-	unsigned char	*pdest;
-	unsigned char	*psrc;
-	int				i;
+// void	*ft_memmove(void *dest, const void *src, size_t n)
+// {
+// 	unsigned char	*pdest;
+// 	unsigned char	*psrc;
+// 	unsigned int	i;
 
-	pdest = (unsigned char *)dest;
-	psrc = (unsigned char *)src;
-	i = 0;
-	if (pdest <= psrc)
-	{
-		while (i < n)
-		{
-			pdest[i] = psrc[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = n - 1;
-		while (i >= 0)
-		{
-			pdest[i] = psrc[i];
-			i--;
-		}
-	}
-	return (dest);
-}
+// 	pdest = (unsigned char *)dest;
+// 	psrc = (unsigned char *)src;
+// 	i = 0;
+// 	if (pdest <= psrc)
+// 	{
+// 		while (i < n)
+// 		{
+// 			pdest[i] = psrc[i];
+// 			i++;
+// 		}
+// 	}
+// 	else if (pdest > psrc)
+// 	{
+// 		i = n;
+// 		while (i > 0)
+// 		{
+// 			pdest[i - 1] = psrc[i - 1];
+// 		}
+// 	}
+// 	return (dest);
+// }
 
-/*int main()
-{
-	char str[10] = "Yello!";
+// // void *ft_memmove(void *dest, const void *src, size_t n)
+// // {
+// //     unsigned char *pdest;//     unsigned char *psrc;
 
-	ft_memmove(str + 3, str, 3*sizeof(char));
+// //     // Check for NULL pointers
+// //     if (!dest && !src)
+// //         return (NULL);
 
-	printf("%s\n", str);
-}*/
+// //     pdest = (unsigned char *)dest;
+// //     psrc = (unsigned char *)src;
+
+// //     // Handle overlapping memory regions
+// //     if (pdest < psrc)
+// //     {
+// //         // Copy from left to right (forward)
+// //         for (size_t i = 0; i < n; i++)
+// //             pdest[i] = psrc[i];
+// //     }
+// //     else if (pdest > psrc)
+// //     {
+// //         // Copy from right to left (backward) to handle overlapping
+// //         for (size_t i = n - 1; i > 0; i--)
+// //             pdest[i] = psrc[i];
+// //     }
+    
+// //     return (dest);
+// // }
+
+// // #include <string.h>
+// // int main()
+// // {
+// // 	char str[] = "Hello";
+
+// // 	// ft_memmove(str + 1, str, 3);
+// // 	memmove(str + 1, str, 3);
+
+// // 	printf("%s\n", str);
+// // }

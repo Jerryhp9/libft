@@ -14,8 +14,8 @@
 
 char	*ft_strnstr(const char *str, const char *substr, size_t n)
 {
-	int	i;
-	int	j;
+	unsigned int	i;
+	unsigned int	j;
 
 	if (*substr == '\0')
 		return ((char *)str);
