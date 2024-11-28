@@ -31,6 +31,8 @@ static int	numlen(int n)
 		nbr /= 10;
 		len++;
 	}
+	if (n == 0)
+		len++;
 	if (n < 0)
 		len++;
 	return (len);
@@ -40,16 +42,16 @@ char	*ft_itoa(int n)
 {
 	char	*str;
 	int		len;
-	int		nbr;
+	long	nbr;
 
-	if (n == '0')
-		return (ft_strdup(""));
-	str = (char *)malloc((sizeof(char)) * (numlen(n) + 1));
+	len = numlen(n);
+	str = (char *)malloc((sizeof(char)) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	len = numlen(n);
 	nbr = n;
 	str[len] = '\0';
+	if (nbr == 0)
+		*str = '0';
 	if (nbr < 0)
 	{
 		str[0] = '-';
@@ -65,7 +67,6 @@ char	*ft_itoa(int n)
 
 // int main()
 // {
-// 	int num = -4200;
-
+// 	int num = 0;
 // 	printf("%s", ft_itoa(num));
 // }

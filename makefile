@@ -6,7 +6,7 @@
 #    By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/06 16:12:35 by jhor              #+#    #+#              #
-#    Updated: 2024/11/26 17:06:29 by jhor             ###   ########.fr        #
+#    Updated: 2024/11/26 21:57:48 by jhor             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ NAME = libft.a
 RM = rm -f
 
 SRC1 = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-ft_strlen.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c \
+ft_strlen.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memset.c ft_strlcpy.c \
 ft_strlcat.c ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c \
 ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c
 

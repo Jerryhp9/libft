@@ -14,12 +14,12 @@
 
 int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	char			*p1;
-	char			*p2;
+	unsigned char	*p1;
+	unsigned char	*p2;
 	unsigned int	i;
 
-	p1 = (char *)str1;
-	p2 = (char *)str2;
+	p1 = (unsigned char *)str1;
+	p2 = (unsigned char *)str2;
 	i = 0;
 	while (i < n)
 	{
@@ -32,7 +32,7 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	return (0);
 }
 
-// // #include <string.h>
+// #include <string.h>
 // int main ()
 // {
 // 	// (void)ac;
@@ -41,6 +41,13 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 // // char *strr1 = av[1];
 // // char *strr2 = ac[2];
 
-// 	printf("%d\n", ft_memcmp(strr1, strr2, 15*sizeof(char)));
+// //printf("%d\n", ft_memcmp(strr1, strr2, 15*sizeof(char)));
 // // printf("%d\n", memcmp(strr1, strr2, 4*sizeof(char)));
+
+// 	char s[] = {-128, 0, 127, 0};
+// 	char sCpy[] = {-128, 0, 127, 0};
+// 	char s2[] = {0, 0, 127, 0};
+// 	char s3[] = {0, 0, 42, 0};
+
+// 	printf("%d\n", ft_memcmp(s, s2, 1));
 // }

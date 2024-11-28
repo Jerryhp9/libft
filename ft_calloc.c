@@ -18,6 +18,8 @@ void	*ft_calloc(size_t n, size_t s)
 	void	*memblock;
 	size_t	i;
 
+	if (s != 0 && n > UINT_MAX / s)
+		return (NULL);
 	totalsize = n * s;
 	memblock = malloc(totalsize);
 	if (memblock == NULL)

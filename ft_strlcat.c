@@ -37,13 +37,12 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 // #include <stdio.h>
 // int main()
 // {
-// 	char dest[20] = "Hello there";
-// 	char src[] = "everyone";
-// 	size_t result;
+//	char dest[20] = "Hello there";
+//	char src[] = "everyone";
+//	size_t result;
 
-	
-// 	// result = strlcat(dest, src, sizeof(dest));
-// 	result = ft_strlcat(dest, src, 25);
+//	// result = strlcat(dest, src, sizeof(dest));
+//	result = ft_strlcat(dest, src, 25);
 
 // 	printf("%ld\n", result);
 // 	printf("%s", dest);

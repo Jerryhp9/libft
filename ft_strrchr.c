@@ -14,8 +14,10 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*p = s + ft_strlen(s) -1;
+	const char	*p = s + ft_strlen(s);
 
+	if (s == NULL)
+		return (NULL);
 	while (p >= s)
 	{
 		if (*p == (char)c)
@@ -27,12 +29,13 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-/*int main() {
-	const char *str = "Hello, world!";
-	char *ptr = ft_strrchr(str, 'o');
+// #include <string.h>
+// int main()
+// {
+// 	const char *str = "Hello, world!";
 
-	if (*ptr != '\0') {
-		printf("%s\n", ptr);
-	}
-	return 0;
-}*/
+// 	// printf("%d\n", ft_strrchr(str, 'o'));
+// 	// printf("%d\n", ft_strrchr(str, 0) == str + strlen(str));
+// 	printf("%s\n", ft_strrchr(str, 'o'));
+// 	return 0;
+// }

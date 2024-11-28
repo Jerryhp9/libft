@@ -14,16 +14,16 @@
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
-	int	destsize;
-	int	srclen;
-	int	i;
+	unsigned int	destsize;
+	unsigned int	srclen;
+	unsigned int	i;
 
 	destsize = size;
 	srclen = ft_strlen(src);
 	i = 0;
 	if (destsize == 0)
 		return (srclen);
-	while ((i < destsize - 1) && (dest[i] != '\0'))
+	while ((i < destsize - 1) && (src[i] != '\0'))
 	{
 		dest[i] = src[i];
 		i++;

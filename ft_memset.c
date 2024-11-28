@@ -18,13 +18,16 @@
  * @return replacement of data types values
 */
 
-void	ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned char	*p;
+	int				index;
 
 	p = (unsigned char *)s;
+	index = 0;
 	while (n--)
-		*p++ = (unsigned char)c;
+		p[index++] = (unsigned char)c;
+	return ((char *)p);
 }
 
 // int main ()
