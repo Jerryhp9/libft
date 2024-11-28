@@ -17,8 +17,6 @@
 
 #include "libft.h"
 
-#include <stdio.h>
-
 static int	numlen(int n)
 {
 	int	nbr;

@@ -6,11 +6,11 @@
 /*   By: jhor <jhor@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 17:24:50 by jhor              #+#    #+#             */
-/*   Updated: 2024/11/25 17:52:42 by jhor             ###   ########.fr       */
+/*   Updated: 2024/11/28 21:26:26 by jhor             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 /**
 * @brief counting str char
